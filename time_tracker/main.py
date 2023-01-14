@@ -1,1 +1,2 @@
-import click
+class TimeTracker:
+    """Tracks Time"""
