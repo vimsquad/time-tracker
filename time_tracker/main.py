@@ -1,0 +1,2 @@
+class TimeTracker:
+    """Tracks Time"""
