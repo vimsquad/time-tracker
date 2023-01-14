@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "time-tracker"
+version = "0.1.0"
+description = "Time Tracker that tracks time and generates reports."
+authors = ["Eric Hernandez <eric.vim.root@gmail.com>"]
+license = "Apache License 2.0"
+readme = "README.md"
+packages = [{include = "time_tracker"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
