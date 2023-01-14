@@ -1,0 +1,30 @@
+name: Update Help Output
+
+on:
+  pull_request:
+    types:
+      - closed
+    branches:
+      - main
+    paths:
+      - '**.py'
+
+jobs:
+  rich_codex:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up python
+        uses: actions/setup-python@v3.1.2
+        with:
+          python-version: '3.10'
+
+      - name: Install your custom tools
+        run: pip install .
+
+      - name: Generate terminal images with rich-codex
+        uses: ewels/rich-codex@v1
+        with:
+          commit_changes: "true"
+          clean_img_paths: "false"
