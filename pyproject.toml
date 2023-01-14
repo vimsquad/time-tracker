@@ -27,7 +27,8 @@ testpaths = [
     "tests",
 ]
 markers = [
-    "cli"
+    "cli",
+    "main"
 ]
 
 [tool.poetry.scripts]
