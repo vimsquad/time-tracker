@@ -11,6 +11,7 @@ def test_cli_version():
     assert result.exit_code == 0
     assert result.output == f"cli, version {version('time_tracker')}\n", result.output
 
+
 @pytest.mark.cli
 def test_cli_output():
     runner = CliRunner()
