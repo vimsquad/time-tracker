@@ -4,7 +4,7 @@ import click
 @click.command()
 @click.version_option(package_name="time-tracker")
 def cli():
-    """Simple program that greets NAME for a total of COUNT times."""
+    """Time Tracker Program"""
     print("click interface")
 
 
