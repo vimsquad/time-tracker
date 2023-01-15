@@ -1,21 +1,22 @@
 import datetime
 from dataclasses import dataclass
-from enum import Enum
-from typing import List
+from enum import Enum, unique
 from dataclasses_json import dataclass_json
 
 
-class TimeCategories(Enum):
-    project: 0
-    chat: 1
-    meeting: 2
+@unique
+class TimeCategories(str, Enum):
+    project: str = "project"
+    chat: str = "chat"
+    meeting: str = "meeting"
 
 
-class TimeStatus(Enum):
-    completed: 0
-    paused: 1
-    cancelled: 3
-    started: 4
+@unique
+class TimeStatus(str, Enum):
+    completed: str = "completed"
+    paused: str = "paused"
+    cancelled: str = "cancelled"
+    started: str = "started"
 
 
 @dataclass()
