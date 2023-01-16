@@ -21,7 +21,7 @@ class TimeStatus(str, Enum):
 
 @dataclass()
 class TimeRecord:
-    start_time: datetime.datetime
+    start_time: datetime.datetime = ""
     end_time: datetime.datetime = ""
 
 

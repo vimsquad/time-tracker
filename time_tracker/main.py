@@ -1,4 +1,3 @@
-from datetime import datetime
 from .data_store import DataStoreController, DataStore
 from .schemas import TimeRow, TimeRecord, TimeStatus, TimeCategories
 
@@ -20,13 +19,11 @@ class TimeTracker:
 
     def add_entry(self, description: str, category: str, status: str):
         """Adds Entry to data store"""
-        now = datetime.now()  # current date and time
-        date_time = now.strftime("%m/%d/%Y, %H:%M:%S")
 
-        self.data_store.upsert_data(
+        self.data_store.add_time_entry(
             description=description,
             data_to_write=TimeRow(
-                time_record=TimeRecord(start_time=date_time),
+                time_record=TimeRecord(),
                 category=TimeCategories(category),
                 status=TimeStatus(status),
             ),
